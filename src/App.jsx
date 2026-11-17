@@ -1,28 +1,23 @@
-import ProjectCard from "./Components/Project";
-import ProfileCard from "./Components/Profile"
+import {BrowserRouter, Routes,Route } from 'react-router-dom';
 import './App.css'
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
+import Portfolio from "./pages/Potfolio.jsx";
+import Navbar from "./Navbar.jsx";
 
 function App() {
     return(
-    <div>
-        <ProfileCard></ProfileCard>
+      <BrowserRouter>
+      <Navbar></Navbar>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+        </Routes>
+      </BrowserRouter>
       
-      <ProjectCard
-        name="Neon Bar"
-        screenshot="../src/assets/Index-page-photo.png"
-        description="A website for a bar."
-        tech="HTML, CSS"
-        learned="How to create website layouts."
-        role="Group project"
-        challenges="Creating responsive navigation."
-        github="https://github.com/"
-      />
-
-      
-
-    </div>
     )
  
 }
 
-export default App
+export default App;

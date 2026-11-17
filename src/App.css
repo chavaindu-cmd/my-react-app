@@ -45,3 +45,29 @@ h2 {
   flex-direction: column;
   
 }
+
+.nav {
+  background-color: #222;
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  color: white;
+}
+
+.nav a:hover {
+  color: orange;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: purple;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkviolet;
+}
